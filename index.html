@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verifikasi Akun - Simulasi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f2f4f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 420px;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .info {
+            text-align: left;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 7px;
+            background: #1e3a8a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #172554;
+        }
+
+        .warning {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff7ed;
+            border: 2px solid #f97316;
+            color: #9a3412;
+            text-align: left;
+        }
+
+        .warning h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .warning p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            ✓
+        </div>
+
+        <h1>Verifikasi Akun</h1>
+
+        <p class="subtitle">
+            Sistem mendeteksi bahwa akun Anda perlu melakukan
+            verifikasi untuk memastikan keamanan akun akademik.
+        </p>
+
+        <div class="info">
+            <strong>Pemberitahuan:</strong><br><br>
+
+            Verifikasi akun diperlukan untuk memastikan
+            informasi akun tetap aktif dan dapat digunakan.
+            Silakan klik tombol di bawah untuk melanjutkan.
+        </div>
+
+        <button class="button" onclick="mulaiSimulasi()">
+            Verifikasi Akun
+        </button>
+
+        <div class="warning" id="warning">
+
+            <h2>Selamat ini hanya simulasi pishing</h2>
+
+            <p>
+                <strong>DARI AKU ALFONSINA JEIN SIMI 24411062</strong>
+            </p>
+
+            <p>
+                Halaman ini dibuat untuk tugas
+                <strong>Keamanan Komputer</strong>.
+            </p>
+
+        </div>
+
+        <div class="footer">
+            Simulasi Pembelajaran Keamanan Komputer
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function mulaiSimulasi() {
+
+            // Menampilkan peringatan simulasi
+            document.getElementById("warning").style.display = "block";
+
+            // Mengubah tombol
+            const tombol = document.querySelector(".button");
+
+            tombol.innerHTML = "Simulasi Selesai";
+            tombol.disabled = true;
+
+            tombol.style.background = "#64748b";
+
+            // Scroll otomatis ke bagian peringatan
+            document.getElementById("warning").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+
+</body>
+</html>
